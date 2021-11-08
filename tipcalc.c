@@ -40,7 +40,7 @@ int main() {
 }
 
 void ask(char* string) {
-	printf(string);
+	printf("%s", string);
 }
 
 double getVal(double val) {
