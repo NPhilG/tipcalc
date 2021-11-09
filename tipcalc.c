@@ -15,7 +15,7 @@
 #include <string.h>
 
 void ask(char*);
-double getVal(double);
+double getVal();
 double calcTotal(double, double, double);
 void printTotal(double, double, double);
 
@@ -29,10 +29,10 @@ int main() {
 
 	printf("You are in a restaurant.\n");
 	ask("What is the total price of your meal: ");
-	price = getVal(price);
+	price = getVal();
 
 	printf("What percent would you like to tip: ");
-	percent = getVal(percent);
+	percent = getVal();
 
 	total = calcTotal(price, percent, tip);
 	printTotal(price, percent,total);
@@ -43,9 +43,10 @@ void ask(char* string) {
 	printf("%s", string);
 }
 
-double getVal(double val) {
+double getVal() {
 	char buffer[20];
 	int loop = 1;
+	double val = 0;
 	while (loop) {
 		fgets(buffer, sizeof(buffer), stdin);
 		sscanf(buffer, "%lf", &val);
