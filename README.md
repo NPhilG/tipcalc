@@ -1,5 +1,4 @@
 # tipcalc
-# tipcalc
 This is a program for C programming basics including:
 basic I/O, passing variables to functions, simple math
 
